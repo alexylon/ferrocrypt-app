@@ -1,0 +1,91 @@
+.footer {
+  padding: 3rem 0;
+  border-top: 1px solid rgba(36, 51, 88, 0.5);
+  background: linear-gradient(180deg, transparent, rgba(5, 8, 16, 0.6));
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brandMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #0f1a2e, #080d1a);
+  border: 1px solid var(--line-2);
+  color: var(--cyan-1);
+}
+
+.brandText {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+}
+
+.brandAccent {
+  color: var(--cyan-2);
+  font-weight: 500;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--text-3);
+  text-align: center;
+  line-height: 1.55;
+}
+
+.meta a {
+  color: var(--text-2);
+}
+
+.meta a:hover {
+  color: var(--cyan-1);
+}
+
+.meta em {
+  font-style: italic;
+  color: var(--cyan-2);
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.links a {
+  color: var(--text-3);
+  transition: color 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--cyan-1);
+}
+
+@media (max-width: 880px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.25rem;
+    justify-items: center;
+  }
+
+  .links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
