@@ -22,16 +22,16 @@ export default function Hero() {
           </div>
 
           <h1 className={styles.title}>
-            Encrypt anything,
+            File and folder encryption,
             <br />
-            <span className={styles.titleAccent}>trust the math.</span>
+            <span className={styles.titleAccent}>readable end to end.</span>
           </h1>
 
           <p className={styles.lede}>
-            <span className="brand-mono">FerroCrypt</span> is a desktop app for
-            sealing files and folders with modern cryptography — a passphrase
-            you remember, or a key pair you share. Everything happens on your
-            machine.
+            <span className="brand-mono">FerroCrypt</span> is a desktop app
+            that encrypts files and folders with a passphrase or an X25519
+            key pair. It runs locally, the source is on GitHub, and the file
+            format is documented byte for byte.
           </p>
 
           <div className={styles.actions}>

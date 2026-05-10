@@ -12,31 +12,31 @@ interface Shot {
 const shots: Shot[] = [
   {
     src: "/images/screenshots/screenshot-1.png",
-    alt: "FerroCrypt — encrypt with a passphrase",
-    tag: "Password mode",
-    title: "Lock a file behind one passphrase",
-    body: "Argon2id stretches your passphrase. Strength is measured in real time.",
+    alt: "FerroCrypt — encrypt a file or folder with a passphrase",
+    tag: "Password · encrypt",
+    title: "Encrypt a file or folder with a passphrase",
+    body: "The passphrase is stretched with Argon2id. A live strength indicator and a confirmation field make it harder to choose a weak or mistyped passphrase.",
   },
   {
     src: "/images/screenshots/screenshot-2.png",
     alt: "FerroCrypt — encrypt with a recipient public key",
     tag: "Key pair · encrypt",
-    title: "Encrypt for a recipient’s public key",
-    body: "Drop in a public key — the SHA3-256 fingerprint is shown for verification.",
+    title: "Encrypt with a recipient’s public key",
+    body: "Select a public key file or paste a fcr1… recipient string. The SHA3-256 fingerprint is shown so you can verify the key out of band.",
   },
   {
     src: "/images/screenshots/screenshot-3.png",
     alt: "FerroCrypt — decrypt with a private key",
     tag: "Key pair · decrypt",
-    title: "Decrypt with your password-protected private key",
-    body: "Private keys never leave the disk in plaintext. Wrong passphrases fail fast and clearly.",
+    title: "Decrypt with a password-protected private key",
+    body: "The private key is unlocked with its password and used to decrypt the .fcr file. A wrong password produces a clear, specific error.",
   },
   {
     src: "/images/screenshots/screenshot-4.png",
     alt: "FerroCrypt — generate a new X25519 key pair",
     tag: "Key pair · generate",
-    title: "Generate a fresh X25519 key pair",
-    body: "Choose a folder, pick a private-key password, and ship — the app refuses to clobber an existing pair.",
+    title: "Generate an X25519 key pair",
+    body: "Choose an output folder and a password for the private key. Existing key pairs in the folder are not overwritten.",
   },
 ];
 
@@ -61,42 +61,35 @@ export default function Showcase() {
     <section className={styles.section}>
       <div className="container">
         <div className={styles.head}>
-          <span className="section-eyebrow">A guided tour</span>
+          <span className="section-eyebrow">Screens</span>
           <h2 className="section-title">
-            Four screens. Two modes.
+            Two modes, four workflows,
             <br />
-            <span className={styles.headAccent}>Zero ambiguity.</span>
+            <span className={styles.headAccent}>one file format.</span>
           </h2>
           <p className="section-lede">
-            Every workflow is a single, clear path from input to ciphertext —
-            no hidden settings, no surprise prompts. Click any tab to inspect
-            in detail.
+            FerroCrypt covers encrypt and decrypt for both passphrase and key
+            pair modes, plus key generation. Click a tab to see the screen for
+            each step.
           </p>
         </div>
 
         <div className={styles.layout}>
-          <div className={styles.stage}>
-            <button
-              type="button"
-              className={styles.frame}
-              onClick={() => setLightbox(current.src)}
-              aria-label="Enlarge screenshot"
-            >
-              <div className={styles.frameGlow} aria-hidden="true" />
-              <img
-                src={current.src}
-                alt={current.alt}
-                width={600}
-                height={900}
-                className={styles.frameImage}
-              />
-            </button>
-            <div className={styles.caption}>
-              <span className={styles.captionTag}>{current.tag}</span>
-              <h3 className={styles.captionTitle}>{current.title}</h3>
-              <p className={styles.captionBody}>{current.body}</p>
-            </div>
-          </div>
+          <button
+            type="button"
+            className={styles.frame}
+            onClick={() => setLightbox(current.src)}
+            aria-label="Enlarge screenshot"
+          >
+            <div className={styles.frameGlow} aria-hidden="true" />
+            <img
+              src={current.src}
+              alt={current.alt}
+              width={600}
+              height={900}
+              className={styles.frameImage}
+            />
+          </button>
 
           <div className={styles.thumbs} role="tablist" aria-label="Screenshots">
             {shots.map((shot, idx) => (
@@ -111,6 +104,7 @@ export default function Showcase() {
                 <span className={styles.thumbLabel}>
                   <span className={styles.thumbTag}>{shot.tag}</span>
                   <span className={styles.thumbTitle}>{shot.title}</span>
+                  <span className={styles.thumbBody}>{shot.body}</span>
                 </span>
               </button>
             ))}

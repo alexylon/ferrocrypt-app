@@ -15,8 +15,7 @@ export default function Footer() {
         </div>
 
         <p className={styles.meta}>
-          From Latin <em>ferrum</em> (iron) — pure-Rust file encryption ·
-          GPL-3.0-only · Made by{" "}
+          File and folder encryption in pure Rust · GPL-3.0-only · By{" "}
           <a href="https://github.com/alexylon" target="_blank" rel="noopener noreferrer">
             Alexander Alexandrov
           </a>

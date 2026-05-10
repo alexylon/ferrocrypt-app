@@ -21,48 +21,48 @@ export const features: Feature[] = [
     Icon: Lock,
     title: "Authenticated encryption",
     description:
-      "XChaCha20-Poly1305 STREAM-BE32 seals every chunk. If a single byte changes — header or payload — decryption refuses to produce plaintext.",
+      "Payload chunks are encrypted with XChaCha20-Poly1305 in STREAM-BE32 mode. If a header or payload byte is modified, decryption stops with a typed authentication error instead of producing plaintext.",
   },
   {
     Icon: Key,
     title: "Two encryption modes",
     description:
-      "A passphrase you remember (Argon2id) or an X25519 key pair you share. Both produce the same .fcr format — the receiver doesn’t need to know which you used.",
+      "Encrypt with a passphrase (Argon2id) or with one or more X25519 recipient public keys. Both modes write the same .fcr file format; the receiver does not need to know which was used.",
   },
   {
     Icon: FilesShield,
-    title: "Files and folders, streamed",
+    title: "Files and folders",
     description:
-      "Encrypt a single file or an entire directory. Streaming chunks keep memory flat even on multi-gigabyte inputs; directories pack into a portable FerroCrypt Archive.",
+      "Encrypts a single file or an entire directory. Large inputs are processed in chunks, so memory usage stays flat. Directories are packed into the FerroCrypt Archive (FCA) format inside the encrypted payload.",
   },
   {
     Icon: NoCloud,
-    title: "Local-only, by design",
+    title: "Local-only",
     description:
-      "No accounts, no telemetry, no cloud. Plaintext, keys, and passphrases never leave your machine. A single app — install it, run it, encrypt.",
+      "No accounts, no telemetry, no network access during encryption or decryption. Plaintext, passphrases, and private keys are read and written only on the local machine.",
   },
   {
     Icon: Cube,
-    title: "Pure Rust, no OpenSSL",
+    title: "Pure Rust",
     description:
-      "Built on audited RustCrypto primitives. The library forbids unsafe code. Hardened extraction refuses symlinks and NTFS reparse points at every directory step.",
+      "Uses RustCrypto primitives and does not depend on OpenSSL. The library is annotated #![forbid(unsafe_code)]. Directory extraction is anchored to cap-std capability handles that refuse symlinks at every step.",
   },
   {
     Icon: Plug,
-    title: "Multi-recipient, fingerprinted",
+    title: "Multi-recipient files",
     description:
-      "A single .fcr can be encrypted to several public keys; any matching private key opens it. SHA3-256 fingerprints give you a stable, verifiable key ID.",
+      "A single .fcr file can be encrypted to several X25519 public keys at once; any matching private key can decrypt it. Public keys can be shared as fcr1… recipient strings.",
   },
   {
     Icon: Terminal,
-    title: "Desktop, CLI, and library",
+    title: "Library, with desktop and CLI on top",
     description:
-      "Use the desktop app for everyday encryption, drop the CLI into scripts, or embed the ferrocrypt crate directly. One format, three surfaces.",
+      "The ferrocrypt library does the encryption. The desktop app and the ferrocrypt-cli command-line tool are two frontends on the same library. All three read and write the same .fcr file format.",
   },
   {
     Icon: ShieldCheck,
-    title: "Atomic, recoverable writes",
+    title: "Atomic output",
     description:
-      "Output is staged before it’s moved into place. Failed decrypts never write to the final path — and partials can optionally be kept for forensic recovery.",
+      "Encrypted output and generated key files are written to a staged path first, then moved into place. A failed decrypt never writes to the final output path; partials can be retained for inspection if requested.",
   },
 ];

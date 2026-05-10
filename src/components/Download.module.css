@@ -162,9 +162,19 @@
 .advancedBody {
   font-size: 0.95rem;
   color: var(--text-3);
-  max-width: 540px;
+  max-width: 580px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.inlineCode {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  color: var(--cyan-2);
+  background: rgba(10, 138, 153, 0.16);
+  border: 1px solid rgba(10, 138, 153, 0.36);
+  padding: 0.05em 0.4em;
+  border-radius: 4px;
 }
 
 .cards {

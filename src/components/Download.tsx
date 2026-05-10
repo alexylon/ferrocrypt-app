@@ -10,10 +10,10 @@ export default function Download() {
         <div className={`section-head center ${styles.head}`}>
           <span className="section-eyebrow">Download</span>
           <h2 className="section-title">
-            Install <span className={styles.headAccent}>FerroCrypt</span> on your machine.
+            Get <span className={styles.headAccent}>FerroCrypt</span>
           </h2>
           <p className="section-lede">
-            Pre-built desktop packages for macOS, Linux, and Windows live on the{" "}
+            Pre-built desktop packages for macOS, Linux, and Windows are on the{" "}
             <a
               href="https://github.com/alexylon/ferrocrypt/releases/latest"
               target="_blank"
@@ -21,7 +21,7 @@ export default function Download() {
             >
               GitHub Releases
             </a>{" "}
-            page. Pick your platform, grab the artifact, run it locally.
+            page.
           </p>
         </div>
 
@@ -53,9 +53,10 @@ export default function Download() {
             <span className={styles.advancedTag}>For developers</span>
             <h3 className={styles.advancedTitle}>Library and CLI</h3>
             <p className={styles.advancedBody}>
-              The same encryption surface as the desktop app, in two more
-              shapes — embed the library in Rust code, or run the CLI in a
-              script.
+              The desktop app and the command-line tool are both built on the
+              <code className={styles.inlineCode}>{" "}ferrocrypt{" "}</code> Rust
+              library. You can install the CLI for scripts, or use the
+              library directly from Rust code.
             </p>
           </div>
 

@@ -6,14 +6,13 @@ export default function Features() {
     <section id="features" className={styles.section}>
       <div className="container">
         <div className={`section-head center ${styles.head}`}>
-          <span className="section-eyebrow">What it does</span>
+          <span className="section-eyebrow">About</span>
           <h2 className="section-title">
-            Serious cryptography, in a single, friendly app.
+            What FerroCrypt does
           </h2>
           <p className="section-lede">
-            FerroCrypt focuses on one job — keeping your files unreadable to
-            anyone but the intended reader. Eight properties keep that promise
-            honest.
+            One job: encrypting files and folders so only the intended reader
+            can decrypt them. Below is what the app does and how it behaves.
           </p>
         </div>
 

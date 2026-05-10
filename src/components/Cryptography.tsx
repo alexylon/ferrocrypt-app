@@ -71,10 +71,10 @@ export default function Cryptography() {
         <div className={`section-head ${styles.head}`}>
           <span className="section-eyebrow">Cryptography</span>
           <h2 className="section-title">
-            Modern primitives, in the open.
+            Primitives and file format
           </h2>
           <p className="section-lede">
-            FerroCrypt’s file format is documented in
+            The on-disk format is documented in
             {" "}
             <a
               href="https://github.com/alexylon/ferrocrypt/blob/main/ferrocrypt-lib/FORMAT.md"
@@ -84,8 +84,7 @@ export default function Cryptography() {
               FORMAT.md
             </a>
             . Every byte of a <code className={styles.code}>.fcr</code> file is
-            either authenticated metadata or sealed payload — there is nothing
-            silently trusted.
+            either authenticated metadata or encrypted payload.
           </p>
         </div>
 
