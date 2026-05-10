@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 4rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .content {
@@ -73,10 +73,10 @@
 }
 
 .title {
-  font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  font-size: clamp(2.1rem, 4.6vw, 3.5rem);
   font-weight: 600;
-  letter-spacing: -0.035em;
-  line-height: 1.02;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
   color: var(--text-1);
   margin-bottom: 1.5rem;
 }
@@ -191,15 +191,16 @@
   width: 100%;
   min-height: 480px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
 .visualFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
-  max-width: 520px;
+  height: 100%;
+  min-height: 100%;
+  max-width: 600px;
 }
 
 .haloOuter,
@@ -240,8 +241,9 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 64%;
-  max-width: 320px;
+  height: calc(96% + 24px);
+  aspect-ratio: 600 / 900;
+  max-width: 100%;
   background:
     linear-gradient(180deg, #0b1426, #06091a);
   border: 1px solid var(--line-2);
@@ -256,7 +258,8 @@
 .appImage {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   filter: contrast(1.05) saturate(1.05);
 }
 
@@ -311,15 +314,20 @@
   .inner {
     grid-template-columns: 1fr;
     gap: 3rem;
+    align-items: center;
   }
 
   .visual {
     order: -1;
     min-height: auto;
+    align-items: center;
   }
 
   .visualFrame {
     max-width: 360px;
+    aspect-ratio: 2 / 3;
+    height: auto;
+    min-height: 0;
   }
 }
 

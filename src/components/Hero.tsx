@@ -83,7 +83,7 @@ function HeroVisual() {
       <div className={styles.haloOuter} />
       <div className={styles.haloInner} />
 
-      <svg className={styles.rings} viewBox="0 0 480 480" aria-hidden="true">
+      <svg className={styles.rings} viewBox="0 0 480 480" overflow="visible" aria-hidden="true">
         <defs>
           <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="rgba(125,243,255,0.0)" />
@@ -92,9 +92,9 @@ function HeroVisual() {
             <stop offset="100%" stopColor="rgba(10,179,196,0.0)" />
           </linearGradient>
         </defs>
-        <circle cx="240" cy="240" r="220" stroke="url(#ringGrad)" strokeWidth="1" fill="none" strokeDasharray="2 6" />
-        <circle cx="240" cy="240" r="180" stroke="url(#ringGrad)" strokeWidth="1" fill="none" strokeDasharray="4 10" />
-        <circle cx="240" cy="240" r="140" stroke="url(#ringGrad)" strokeWidth="1" fill="none" />
+        <circle cx="240" cy="240" r="270" stroke="url(#ringGrad)" strokeWidth="1" fill="none" strokeDasharray="2 6" />
+        <circle cx="240" cy="240" r="230" stroke="url(#ringGrad)" strokeWidth="1" fill="none" strokeDasharray="4 10" />
+        <circle cx="240" cy="240" r="190" stroke="url(#ringGrad)" strokeWidth="1" fill="none" />
       </svg>
 
       <div className={styles.appCard}>
