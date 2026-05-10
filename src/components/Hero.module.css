@@ -253,29 +253,6 @@
     0 0 60px -10px rgba(10, 179, 196, 0.35);
 }
 
-.appChrome {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.55rem 0.7rem;
-  background: rgba(10, 17, 32, 0.85);
-  border-bottom: 1px solid rgba(36, 51, 88, 0.6);
-}
-
-.appDot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-}
-
-.appTitle {
-  margin-left: auto;
-  margin-right: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-3);
-}
-
 .appImage {
   display: block;
   width: 100%;

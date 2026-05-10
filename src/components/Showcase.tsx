@@ -83,12 +83,6 @@ export default function Showcase() {
               aria-label="Enlarge screenshot"
             >
               <div className={styles.frameGlow} aria-hidden="true" />
-              <div className={styles.frameChrome}>
-                <span className={styles.chromeDot} style={{ background: "#ff5f57" }} />
-                <span className={styles.chromeDot} style={{ background: "#febc2e" }} />
-                <span className={styles.chromeDot} style={{ background: "#28c840" }} />
-                <span className={styles.chromeTitle}>FerroCrypt — {current.tag}</span>
-              </div>
               <img
                 src={current.src}
                 alt={current.alt}

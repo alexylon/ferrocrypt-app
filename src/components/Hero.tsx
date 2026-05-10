@@ -98,12 +98,6 @@ function HeroVisual() {
       </svg>
 
       <div className={styles.appCard}>
-        <div className={styles.appChrome}>
-          <span className={styles.appDot} style={{ background: "#ff5f57" }} />
-          <span className={styles.appDot} style={{ background: "#febc2e" }} />
-          <span className={styles.appDot} style={{ background: "#28c840" }} />
-          <span className={styles.appTitle}>FerroCrypt</span>
-        </div>
         <img
           src="/images/screenshots/screenshot-1.png"
           alt=""
