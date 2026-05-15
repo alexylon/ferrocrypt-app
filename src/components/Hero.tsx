@@ -28,10 +28,17 @@ export default function Hero() {
           </h1>
 
           <p className={styles.lede}>
-            <span className="brand-mono">FerroCrypt</span> is a desktop app
-            that encrypts files and folders with a passphrase or an X25519
-            key pair. It runs locally, the source is on GitHub, and the file
-            format is documented byte for byte.
+            <span className="brand-mono">FerroCrypt</span> is a free,
+            open-source desktop app that encrypts files and folders with a
+            passphrase or an X25519 key pair. It runs locally, and the{" "}
+            <a
+              href="https://github.com/alexylon/ferrocrypt/blob/main/ferrocrypt-lib/FORMAT.md"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              file format
+            </a>{" "}
+            is documented byte for byte.
           </p>
 
           <div className={styles.actions}>

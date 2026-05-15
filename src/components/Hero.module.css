@@ -98,6 +98,17 @@
   margin-bottom: 2rem;
 }
 
+.lede a {
+  text-decoration: underline;
+  text-decoration-color: rgba(52, 214, 230, 0.45);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.lede a:hover {
+  text-decoration-color: var(--cyan-1);
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;

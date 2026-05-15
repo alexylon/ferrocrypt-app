@@ -68,7 +68,7 @@ export default function Cryptography() {
   return (
     <section id="cryptography" className={styles.section}>
       <div className="container">
-        <div className={`section-head ${styles.head}`}>
+        <div className={`section-head center ${styles.head}`}>
           <span className="section-eyebrow">Cryptography</span>
           <h2 className="section-title">
             Primitives and file format
