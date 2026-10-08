@@ -21,7 +21,7 @@
 }
 
 :root {
-  /* Ink — page surfaces, from deepest to lifted */
+  /* Surfaces, deepest first */
   --ink-0: #050810;
   --ink-1: #080d1a;
   --ink-2: #0c1424;
@@ -29,18 +29,15 @@
   --ink-4: #18223c;
   --ink-5: #1f2c4c;
 
-  /* Hairlines */
   --line-1: #1a2440;
   --line-2: #243358;
   --line-3: #2e4376;
 
-  /* Text */
   --text-1: #e9eef9;
   --text-2: #b6c1da;
   --text-3: #7d89a7;
   --text-4: #54607d;
 
-  /* Cyan — the FerroCrypt signature */
   --cyan-1: #7df3ff;
   --cyan-2: #34d6e6;
   --cyan-3: #0ab3c4;
@@ -49,16 +46,13 @@
   --cyan-glow: rgba(52, 214, 230, 0.22);
   --cyan-glow-soft: rgba(52, 214, 230, 0.08);
 
-  /* Accents */
   --amber: #f3b860;
   --rose: #ff7a8a;
   --emerald: #4ee0a3;
 
-  /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', 'Menlo', monospace;
 
-  /* Geometry */
   --container: 1180px;
   --container-narrow: 880px;
   --radius-sm: 8px;
@@ -66,7 +60,6 @@
   --radius-lg: 18px;
   --radius-xl: 24px;
 
-  /* Shadows */
   --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.03) inset,
                  0 24px 60px -24px rgba(0, 0, 0, 0.7);
   --shadow-lift: 0 1px 0 rgba(255, 255, 255, 0.04) inset,
@@ -123,7 +116,6 @@ samp {
   color: #fff;
 }
 
-/* Page-level chrome */
 .page {
   position: relative;
   min-height: 100vh;
@@ -160,7 +152,6 @@ samp {
   padding: 0 1.5rem;
 }
 
-/* Section primitives */
 .section {
   padding: 6rem 0;
   position: relative;
@@ -220,13 +211,11 @@ samp {
   margin-right: auto;
 }
 
-/* Brand mark — small cyan tag */
 .brand-mono {
   font-family: var(--font-mono);
   color: var(--cyan-2);
 }
 
-/* Surface helpers */
 .surface {
   background:
     linear-gradient(180deg, rgba(17, 26, 48, 0.92), rgba(12, 20, 36, 0.92));
@@ -236,7 +225,6 @@ samp {
   backdrop-filter: blur(8px);
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -302,7 +290,6 @@ samp {
   background: rgba(52, 214, 230, 0.08);
 }
 
-/* Tag chip */
 .chip {
   display: inline-flex;
   align-items: center;
