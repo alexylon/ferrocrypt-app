@@ -42,16 +42,7 @@ export default function Hero() {
           </p>
 
           <div className={styles.actions}>
-            <a
-              className={styles.btnPrimary}
-              href="#download"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("download")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
+            <a className={styles.btnPrimary} href="#download">
               Download for desktop
               <Arrow width={16} height={16} />
             </a>

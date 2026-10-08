@@ -1,6 +1,6 @@
 # [ferrocrypt.app](https://www.ferrocrypt.app)
 
-Website for [FerroCrypt](https://github.com/alexylon/ferrocrypt) — a terminal-based typing tutor built with Rust and [ratatui](https://ratatui.rs).
+Website for [FerroCrypt](https://github.com/alexylon/ferrocrypt) — file and folder encryption in pure Rust.
 
 ## Development
 

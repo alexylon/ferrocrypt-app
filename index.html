@@ -7,7 +7,7 @@
     <title>FerroCrypt — File and folder encryption for desktop</title>
     <meta
       name="description"
-      content="FerroCrypt is a desktop app for encrypting files and folders with a passphrase or X25519 key pair. Pure-Rust implementation using XChaCha20-Poly1305, Argon2id, X25519, and HKDF/HMAC-SHA3-256. Local-only, open source, GPL-3.0."
+      content="Free, open-source desktop app for macOS, Linux, and Windows. Encrypt files and folders with a passphrase or public key. Local-only, written in pure Rust."
     />
     <meta name="theme-color" content="#050810" />
     <meta name="color-scheme" content="dark" />
@@ -16,7 +16,6 @@
     <link rel="apple-touch-icon" href="/images/app_icon.png" />
     <link rel="canonical" href="https://www.ferrocrypt.app/" />
 
-    <!-- Open Graph -->
     <meta property="og:url" content="https://www.ferrocrypt.app/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FerroCrypt" />
@@ -33,7 +32,6 @@
       content="FerroCrypt desktop app showing password-based file encryption"
     />
 
-    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content="ferrocrypt.app" />
     <meta property="twitter:url" content="https://www.ferrocrypt.app/" />
@@ -44,7 +42,6 @@
     />
     <meta name="twitter:image" content="https://www.ferrocrypt.app/images/screenshots/screenshot-1.png" />
 
-    <!-- Preload critical fonts -->
     <link rel="preload" as="font" type="font/woff2" href="/fonts/Inter-Latin.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/JetBrainsMono-Latin.woff2" crossorigin />
 
@@ -98,19 +95,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <noscript>
-      <h1>FerroCrypt — File and folder encryption for desktop</h1>
-      <p>
-        FerroCrypt is a desktop application for encrypting files and folders
-        with a passphrase or X25519 key pair. Pure Rust implementation using
-        XChaCha20-Poly1305, Argon2id, X25519, and HKDF/HMAC-SHA3-256.
-        Local-only, open source, GPL-3.0.
-      </p>
-      <p>
-        Download: <a href="https://github.com/alexylon/ferrocrypt/releases/latest">github.com/alexylon/ferrocrypt/releases/latest</a>
-      </p>
-      <p>Install the CLI with: <code>cargo install ferrocrypt-cli</code></p>
-    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

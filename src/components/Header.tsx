@@ -1,10 +1,6 @@
 import styles from "./Header.module.css";
 import { GitHub, ShieldKey } from "./Icons";
 
-function scrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-}
-
 const nav = [
   { id: "features", label: "Features" },
   { id: "modes", label: "Modes" },
@@ -16,23 +12,20 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <button
-          className={styles.logo}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
+        <a className={styles.logo} href="#top">
           <span className={styles.logoMark}>
             <ShieldKey size={22} />
           </span>
           <span className={styles.logoText}>
             Ferro<span className={styles.logoAccent}>Crypt</span>
           </span>
-        </button>
+        </a>
 
         <nav className={styles.nav} aria-label="Primary">
           {nav.map((item) => (
-            <button key={item.id} onClick={() => scrollTo(item.id)}>
+            <a key={item.id} href={`#${item.id}`}>
               {item.label}
-            </button>
+            </a>
           ))}
         </nav>
 
@@ -47,12 +40,9 @@ export default function Header() {
             <GitHub width={16} height={16} />
             <span className={styles.githubLabel}>GitHub</span>
           </a>
-          <button
-            className={styles.cta}
-            onClick={() => scrollTo("download")}
-          >
+          <a className={styles.cta} href="#download">
             Download
-          </button>
+          </a>
         </div>
       </div>
     </header>
