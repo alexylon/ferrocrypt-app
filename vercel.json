@@ -3,7 +3,7 @@
     {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "ferrocrypt-app.vercel.app" }],
-      "destination": "https://www.ferrocrypt.app/:path",
+      "destination": "https://ferrocrypt.app/:path",
       "permanent": true
     }
   ]

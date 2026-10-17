@@ -1,4 +1,4 @@
-# [ferrocrypt.app](https://www.ferrocrypt.app)
+# [ferrocrypt.app](https://ferrocrypt.app)
 
 Website for [FerroCrypt](https://github.com/alexylon/ferrocrypt) — file and folder encryption in pure Rust.
 

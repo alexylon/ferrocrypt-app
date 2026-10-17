@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ferrocrypt.app/sitemap.xml
+Sitemap: https://ferrocrypt.app/sitemap.xml
