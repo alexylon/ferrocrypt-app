@@ -11,7 +11,7 @@ const primitives: Primitive[] = [
   {
     role: "Payload encryption",
     name: "XChaCha20-Poly1305",
-    note: "STREAM-BE32, audited by NCC Group",
+    note: "STREAM-BE32, in 64 KiB chunks",
   },
   {
     role: "Passphrase KDF",
@@ -104,11 +104,15 @@ export default function Cryptography() {
               </div>
             ))}
             <div className={styles.tableFoot}>
-              <span className={styles.footMark}>!</span>
+              <span className={styles.footMark}>
+                <Check width={12} height={12} />
+              </span>
               <span>
-                FerroCrypt has not undergone an independent third-party security
-                audit. The <a href="https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/" target="_blank" rel="noopener noreferrer">chacha20poly1305</a> crate used for payload
-                encryption was audited by NCC Group.
+                The chacha20poly1305 library that encrypts file contents was{" "}
+                <a href="https://www.nccgroup.com/research/public-report-rustcrypto-aesgcm-and-chacha20pluspoly1305-implementation-review/" target="_blank" rel="noopener noreferrer">audited by NCC Group</a>,
+                and the curve25519-dalek library that X25519 key agreement is
+                built on was{" "}
+                <a href="https://blog.quarkslab.com/security-audit-of-dalek-libraries.html" target="_blank" rel="noopener noreferrer">audited by Quarkslab</a>.
               </span>
             </div>
           </div>
