@@ -15,10 +15,11 @@ export default function Footer() {
         </div>
 
         <p className={styles.meta}>
-          File and folder encryption in pure Rust · GPL-3.0-only · By{" "}
+          File and folder encryption in pure Rust · GPL-3.0-only · Made by{" "}
           <a href="https://github.com/alexylon" target="_blank" rel="noopener noreferrer">
             Alexander Alexandrov
-          </a>
+          </a>{" "}
+          in the EU <img className={styles.flag} src="/images/eu_flag.svg" alt="" />
         </p>
 
         <nav className={styles.links} aria-label="Project links">
