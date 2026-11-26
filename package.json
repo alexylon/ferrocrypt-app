@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && node scripts/prerender.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "og-image": "node scripts/og-image.mjs"
   },
   "dependencies": {
     "react": "^19.1.0",
